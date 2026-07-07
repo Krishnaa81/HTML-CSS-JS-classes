@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+
+    <style>
+
+        body{
+            background-color: gray;
+        }
+
+        h1{
+            background-color: yellow;
+            color: red;
+        }
+
+        body>p{
+            background-color: powderblue;
+            color: black;
+        }
+
+        div p{
+            background-color: orange;
+            color: blue;
+        }
+
+        div>p{
+            background-color: cyan;
+            color: brown;
+        }
+
+        .nesteddiv p{
+            background-color: navy;
+            color: pink;
+        }
+
+        #firstp{
+            background-color: tomato;
+        }
+
+        span p{
+            background-color: pink;
+            color: darkblue;
+        }
+
+        
+    </style>
+</head>
+<body>
+     <h1>Programming Languages</h1>
+
+    <p id="firstp">Paragraph outside section</p>
+
+    <div>
+
+        <p>Java is a popular programming language.</p>
+
+        <span>
+            <p>Python is beginner friendly.</p>
+        </span>
+
+        <span>
+            <p>JavaScript powers interactive websites.</p>
+        </span>
+
+        <p>C++ is widely used for system programming.</p>
+
+        <div class="nesteddiv">
+
+            <p>Nested section starts here.</p>
+
+            <span>
+                <p>React is a JavaScript library.</p>
+            </span>
+
+            <span>
+                <p>Spring Boot simplifies Java development.</p>
+            </span>
+
+            <p>Nested section ends here.</p>
+
+        </div>
+
+        <p>Programming improves problem-solving skills.</p>
+
+    </div>
+
+    <p>Paragraph outside section</p>
+    
+</body>
+
+</html>
