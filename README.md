@@ -1,4 +1,4 @@
-# HTML Projects
+# HTML-CSS-JS-classes
 
 This repository contains my frontend practice projects completed while learning HTML and CSS.
 
