@@ -1,0 +1,702 @@
+# JavaScript Short Notes
+
+## What is JavaScript?
+- JavaScript is a scripting language used to make web pages interactive and dynamic.
+- Introduced by Brendan Eich in 1995.
+- Originally called Mocha, then LiveScript, and finally JavaScript.
+
+---
+
+## Features
+- High-level language
+- Interpreted language
+- Object-oriented
+- Dynamically typed
+- Used for frontend and backend (Node.js)
+
+---
+
+## Ways to Use JavaScript
+
+### 1. Inline JavaScript
+```html
+<button onclick="alert('Hello')">Click</button>
+```
+
+### 2. Internal JavaScript
+```html
+<script>
+console.log("Hello");
+</script>
+```
+
+### 3. External JavaScript
+```html
+<script src="script.js"></script>
+```
+
+---
+
+## Output
+
+```javascript
+console.log("Hello World");
+```
+
+Output is displayed in the browser console.
+
+---
+
+# Variables
+
+## var
+- Can be re-declared
+- Can be re-assigned
+
+```javascript
+var a = 10;
+var a = 20;
+```
+
+## let
+- Cannot be re-declared
+- Can be re-assigned
+
+```javascript
+let a = 10;
+a = 20;
+```
+
+## const
+- Cannot be re-declared
+- Cannot be re-assigned
+
+```javascript
+const PI = 3.14;
+```
+
+---
+
+# Variable Naming Rules
+
+✔ Start with letters, _ or $
+✔ Case-sensitive
+✔ Cannot use keywords
+✔ Cannot contain spaces
+✔ Cannot start with numbers
+
+Example:
+```javascript
+let firstName = "Krishna";
+```
+
+---
+
+# Data Types
+
+## Primitive
+- Number
+- String
+- Boolean
+- Undefined
+- Null
+- BigInt
+
+## Non-Primitive
+- Object
+- Array
+- Function
+
+---
+
+# typeof Operator
+
+```javascript
+typeof 10          // number
+typeof "Hello"     // string
+typeof true        // boolean
+typeof undefined   // undefined
+typeof null        // object
+```
+
+---
+
+# Operators
+
+## Arithmetic
+```javascript
++
+-
+*
+/
+%
+**
+```
+
+## Comparison
+```javascript
+==
+===
+!=
+!==
+>
+<
+>=
+<=
+```
+
+## Logical
+```javascript
+&&
+||
+!
+```
+
+## Ternary
+```javascript
+condition ? true : false;
+```
+
+Example:
+```javascript
+let age = 20;
+let result = age >= 18 ? "Eligible" : "Not Eligible";
+```
+
+---
+
+# Type Conversion
+
+## Implicit (Automatic)
+
+```javascript
+10 + "5"      // "105"
+true + 1      // 2
+false + 1     // 1
+```
+
+## Explicit (Manual)
+
+```javascript
+Number("20")
+String(100)
+Boolean(1)
+```
+
+---
+
+# Truthy Values
+
+```text
+true
+1
+10
+"hello"
+[]
+{}
+```
+
+# Falsy Values
+
+```text
+false
+0
+""
+null
+undefined
+NaN
+```
+
+---
+
+# JavaScript Execution
+
+- Browser
+- Console
+- Node.js
+
+Run using Node.js:
+
+```bash
+node script.js
+```
+
+
+## What is an Array?
+- An array is a collection of multiple values stored in a single variable.
+- Arrays can store different data types.
+- Index starts from 0.
+
+Example:
+```javascript
+let fruits = ["Apple", "Mango", "Orange"];
+console.log(fruits[0]); // Apple
+```
+
+---
+
+## Creating Arrays
+
+```javascript
+let a = [10,20,30];
+let b = new Array(1,2,3);
+```
+
+---
+
+## Array Properties
+
+### length
+
+```javascript
+let arr = [10,20,30];
+console.log(arr.length);
+```
+
+Output:
+```
+3
+```
+# JavaScript Arrays
+---
+
+# Common Array Methods
+
+## push()
+
+Adds element at the end.
+
+```javascript
+let arr=[1,2];
+arr.push(3);
+```
+
+Output:
+```
+[1,2,3]
+```
+
+---
+
+## pop()
+
+Removes last element.
+
+```javascript
+arr.pop();
+```
+
+---
+
+## shift()
+
+Removes first element.
+
+---
+
+## unshift()
+
+Adds element at beginning.
+
+---
+
+## splice()
+
+Add, remove or replace elements.
+
+---
+
+## slice()
+
+Returns a portion of an array.
+
+---
+
+## concat()
+
+Joins arrays.
+
+---
+
+## indexOf()
+
+Returns index of element.
+
+---
+
+## includes()
+
+Checks whether element exists.
+
+---
+
+## reverse()
+
+Reverses array.
+
+---
+
+## sort()
+
+Sorts array.
+
+---
+
+## join()
+
+Converts array into string.
+
+---
+
+## forEach()
+
+Iterates through each element.
+
+---
+
+## map()
+
+Returns a new transformed array.
+
+---
+
+## filter()
+
+Returns matching elements.
+
+---
+
+## find()
+
+Returns first matching element.
+
+---
+
+## reduce()
+
+Reduces array to a single value.
+
+---
+
+
+# JavaScript Functions
+
+## What is a Function?
+- A function is a block of reusable code that performs a specific task.
+- It executes only when it is called (invoked).
+- Functions help avoid writing the same code multiple times.
+
+Syntax:
+```javascript
+function functionName() {
+    // code
+}
+```
+
+---
+
+# Why Functions?
+
+- Code Reusability
+- Easy to Maintain
+- Reduces Code Duplication
+- Improves Readability
+
+---
+
+# Function Declaration
+
+```javascript
+function add(a, b){
+    let c = a + b;
+    return c;
+}
+
+console.log(add(100,200));
+```
+
+Output:
+```
+300
+```
+
+---
+
+# Function Expression
+
+- A function stored inside a variable.
+
+```javascript
+let add = function(a,b){
+    return a+b;
+}
+
+console.log(add(100,200));
+```
+
+Output:
+```
+300
+```
+
+---
+
+# Anonymous Function
+
+- A function without a name.
+- Mostly used with function expressions.
+
+```javascript
+let add = function(a,b){
+    return a+b;
+};
+```
+
+---
+
+# Arrow Function (ES6)
+
+- Short syntax of writing functions.
+
+Syntax:
+
+```javascript
+let add = (a,b) => a+b;
+```
+
+Example:
+
+```javascript
+console.log(add(100,200));
+```
+
+Output
+
+```
+300
+```
+
+---
+
+# Arrow Function with One Parameter
+
+```javascript
+let square = num => num*num;
+
+console.log(square(12));
+```
+
+Output
+
+```
+144
+```
+
+---
+
+# Arrow Function with Return
+
+```javascript
+let result = (num)=>{
+    return num*num;
+}
+
+console.log(result(13));
+```
+
+Output
+
+```
+169
+```
+
+---
+
+# Function Without Parameters
+
+```javascript
+let a=100;
+let b=200;
+
+function add(){
+    console.log(a+b);
+}
+
+add();
+```
+
+Output
+
+```
+300
+```
+
+---
+
+# Function With Parameters
+
+```javascript
+function multiply(x,y){
+    console.log(x*y);
+}
+
+multiply(10,20);
+```
+
+Output
+
+```
+200
+```
+
+---
+
+# return Keyword
+
+- Returns a value from a function.
+- Stops function execution.
+
+Example
+
+```javascript
+function add(a,b){
+    return a+b;
+}
+
+let ans=add(10,20);
+console.log(ans);
+```
+
+Output
+
+```
+30
+```
+
+---
+
+# Function Call
+
+```javascript
+add(10,20);
+square(12);
+multiply(5,4);
+```
+
+---
+
+# Reassigning Function
+
+Functions can be assigned to variables.
+
+```javascript
+let operation;
+
+operation=function(a,b){
+    return a+b;
+}
+
+console.log(operation(10,20));
+
+operation=function(a,b){
+    return a*b;
+}
+
+console.log(operation(20,30));
+```
+
+Output
+
+```
+30
+600
+```
+
+---
+
+# Browser Input
+
+```javascript
+let age=Number(prompt("Enter your age"));
+console.log(age);
+```
+
+Used in Browser.
+
+---
+
+# Node.js Input
+
+Install:
+
+```
+npm install prompt-sync
+```
+
+Example
+
+```javascript
+let prompt=require("prompt-sync")();
+
+let age=prompt("Enter your age:");
+
+console.log(age);
+```
+
+---
+
+# Multiple Inputs
+
+```javascript
+let prompt=require("prompt-sync")();
+
+let a=Number(prompt("Enter first number:"));
+let b=Number(prompt("Enter second number:"));
+
+console.log(a+b);
+```
+
+---
+
+# Function Types
+
+1. Function Declaration
+2. Function Expression
+3. Anonymous Function
+4. Arrow Function
+
+---
+
+# Function vs Arrow Function
+
+| Function | Arrow Function |
+|-----------|----------------|
+| Uses `function` keyword | Uses `=>` |
+| Longer syntax | Short syntax |
+| Can be hoisted | Cannot be used before declaration |
+
+Example
+
+```javascript
+function add(a,b){
+    return a+b;
+}
+
+let sum=(a,b)=>a+b;
+```
+
+---
+
+# Advantages of Functions
+
+✔ Code Reusability
+
+✔ Easy Debugging
+
+✔ Easy Maintenance
+
+✔ Better Readability
+
+✔ Reduces Duplicate Code
+
+---
