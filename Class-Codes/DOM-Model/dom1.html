@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+</head>
+
+<body>
+
+    <h1 id="main-heading">Welcome to DOM Practice</h1>
+
+    <div id="container">
+        <p class="info">This is paragraph 1 with class "info"</p>
+        <p class="info">This is paragraph 2 with class "info"</p>
+        <p class="info">This is paragraph 3 with class "info"</p>
+        <p class="special">This is a special paragraph</p>
+    </div>
+
+    <ul id="fruit-list">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+        <li>Mango</li>
+        <li>Grapes</li>
+    </ul>
+
+    <div id="buttons">
+        <button class="btn primary" id="btn" onclick="changeText()">
+            Button 1
+        </button>
+
+        <button class="btn secondary">
+            Button 2
+        </button>
+
+        <button class="btn primary">
+            Button 3
+        </button>
+    </div>
+
+    <br><br>
+
+    <input type="text" id="username" placeholder="Enter username">
+
+    <input type="text" id="email" placeholder="Enter email">
+
+
+
+    <script>
+        // let info=document.getElementById("main-heading");
+        // console.log(info.textContent);
+
+        // let content=document.getElementsByClassName("info");
+        // console.log(content[0].textContent);
+
+        // let content = document.getElementsByTagName("input");
+        // console.log(content[0].textContent);
+
+        // let content = document.querySelector(".info");
+        // console.log(content[2].textContent);
+
+
+        // let content = document.querySelectorAll(".info");
+        // console.log(content[2].textContent);
+        
+        let content=document.getElementById("btn");
+        function changeText(){
+        content.textContent="welcome";
+        }
+            
+        
+        
+    </script>
+
+</body>
+</html>
